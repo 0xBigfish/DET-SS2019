@@ -7,12 +7,10 @@
 #### -https://resources.oreilly.com/examples/9781785287473 (ein Bsp.-Projekt?)
 #### -https://project.dke.maastrichtuniversity.nl/cig2018/generating-worlds-at-guerrilla-games/
 #### -https://www.guerrilla-games.com/read/gpu-based-procedural-placement-in-horizon-zero-dawn
+#### -https://blogs.unity3d.com/2019/01/28/obstacle-tower-challenge-test-the-limits-of-intelligence-systems/
+#### -https://storage.googleapis.com/obstacle-tower-build/Obstacle_Tower_Paper_Final.pdf (paper)
 
-## Über das Thema Kampfsystem und Künstliche Intelligenz:
-#### -https://en.scratch-wiki.info/wiki/Role-Playing_Game_Projects
-#### -https://en.wikipedia.org/wiki/Artificial_intelligence_in_video_games
-#### -https://www.codeproject.com/Articles/14840/Artificial-Intelligence-in-Games
-#### -http://gameaibook.org/
+
 
 
 ## Meilensteinplan und Gantt Chart
