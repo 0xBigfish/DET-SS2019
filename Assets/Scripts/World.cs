@@ -12,11 +12,11 @@ public class World : MonoBehaviour
 	public GameObject player;
 	public Material textureAtlas;
 	public Material fluidTexture;
-	public static int columnHeight = 16;
-	public static int chunkSize = 8;
+	public static int columnHeight = 16; //face height
+	public static int chunkSize = 20;
 	public static int radius = 3;
 	public static uint maxCoroutines = 1000;
-	public static ConcurrentDictionary<string, Chunk> chunks;
+	public static ConcurrentDictionary<string, Chunk> chunks; //like a Hashmap key and value
 	public static List<string> toRemove = new List<string>();
 
 	public static bool firstbuild = true;
@@ -38,7 +38,7 @@ public class World : MonoBehaviour
 	}
 
     /// <summary>
-    /// Creates a name for the column based on its position
+    /// Creates a name for the column(we mean face of cubes) based on its position
     /// </summary>
     /// <param name="v">Position of the column</param>
     /// <returns>Returns a string witht he column's name</returns>
