@@ -152,7 +152,30 @@ public class Chunk
 						continue;
 					}
 
-					int surfaceHeight = Utils.GenerateHeight(worldX,worldZ);
+
+					/*
+						The following is made by us
+					 */
+					int surfaceHeight = 50;
+					int bedrockHeight = 40;
+
+					if(worldY > surfaceHeight){
+						chunkData[x,y,z] = new Block(Block.BlockType.AIR, pos, chunk.gameObject, this);
+				 	} else if( worldY == surfaceHeight){
+						chunkData[x,y,z] = new Block(Block.BlockType.DIRT, pos, chunk.gameObject, this);
+					} else if( worldY < surfaceHeight && worldY > bedrockHeight){
+						chunkData[x,y,z] = new Block(Block.BlockType.STONE, pos, chunk.gameObject, this);
+					} else if( worldY <= bedrockHeight){
+						chunkData[x,y,z] = new Block(Block.BlockType.BEDROCK, pos, chunk.gameObject, this);
+					} else {
+						Debug.Log("Error occured in Chunk.BuildChunk()");
+					}
+
+
+					/*
+					Marco's method to construct a chunk:
+
+					int surfaceHeight = Utils.GenerateHeight(worldX,worldZ);			// generates an uneven surface area using noise
 					
                     // Place bedrock at height 0
 					if(worldY == 0)
@@ -200,7 +223,8 @@ public class Chunk
 					if(chunkData[x,y,z].blockType != Block.BlockType.WATER && Utils.fBM3D(worldX, worldY, worldZ, 0.1f, 3) < 0.42f)
 						chunkData[x,y,z] = new Block(Block.BlockType.AIR, pos, 
 						                chunk.gameObject, this);
-
+					
+					*/
 					status = ChunkStatus.DRAW;
 				}
 	}
